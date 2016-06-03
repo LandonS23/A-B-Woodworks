@@ -1,4 +1,4 @@
-## Angular Starter Kit
+## A & B Woodworks
 
 ### Quick Start
 
@@ -11,14 +11,6 @@
 ### List Available Gulp Tasks
 
 1. gulp help
-
-### Create Your Own Project Off of Angular Starter Kit
-
-1. delete .git folder
-2. change project folder name to whatever
-3. git init
-4. git add --all
-5. git commit -m 'initial commit'
 
 ### TODO
 
