@@ -4,7 +4,7 @@
 
     'use strict';
 
-    angular.module('angularStarterKit').controller('layoutController', [layoutController]);
+    angular.module('ABWoodworks').controller('layoutController', [layoutController]);
 
     function layoutController() {
 
@@ -16,16 +16,16 @@
             emptyString: ''
         };
 
-        vm.example1Active = 'active';
-        vm.example2Active = statics.emptyString;
+        vm.homeActive = 'active';
+        vm.galleryActive = statics.emptyString;
 
         vm.tabSelect = function (tabName) {
-            if (vm.example1Active && tabName !== 'example1') {
-                vm.example2Active = 'active';
-                vm.example1Active = statics.emptyString;
+            if (vm.homeActive && tabName !== 'home') {
+                vm.galleryActive = 'active';
+                vm.homeActive = statics.emptyString;
             } else {
-                vm.example1Active = 'active';
-                vm.example2Active = statics.emptyString;
+                vm.homeActive = 'active';
+                vm.galleryActive = statics.emptyString;
             }
         };
     }

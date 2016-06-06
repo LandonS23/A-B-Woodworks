@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('angularStarterKit', ['ui.router'])
+    angular.module('ABWoodworks', ['ui.router'])
 
     .config(function ($stateProvider, $urlRouterProvider) {
 
@@ -15,19 +15,19 @@
                 controller: 'layoutController',
                 controllerAs: 'layoutController'
             })
-            .state('app.example-1', {
-                url: '/example-1',
-                templateUrl: clientApp + 'example-1-module/example-1.html',
-                controller: 'example1Controller',
-                controllerAs: 'example1Controller'
+            .state('app.home', {
+                url: '/home',
+                templateUrl: clientApp + 'home-module/home.html',
+                controller: 'homeController',
+                controllerAs: 'homeController'
             })
-            .state('app.example-2', {
-                url: '/example-2',
-                templateUrl: clientApp + 'example-2-module/example-2.html',
-                controller: 'example2Controller',
-                controllerAs: 'example2Controller'
+            .state('app.gallery', {
+                url: '/gallery',
+                templateUrl: clientApp + 'gallery-module/gallery.html',
+                controller: 'galleryController',
+                controllerAs: 'galleryController'
             });
 
-        $urlRouterProvider.otherwise('/app/example-1');
+        $urlRouterProvider.otherwise('/app/home');
     });
 })();
