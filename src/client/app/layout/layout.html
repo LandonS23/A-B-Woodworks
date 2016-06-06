@@ -1,7 +1,35 @@
 <div>
     <nav class="navbar navbar-default">
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="../../images/AB_transparent.png">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li ng-click="layoutController.tabSelect('home')" class="{{layoutController.homeActive}}">
+                        <a ui-sref="app.home">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Cabinets</a></li>
+                            <li><a href="#">Doors</a></li>
+                            <li><a href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li ng-click="layoutController.tabSelect('contact')" class="{{layoutController.contactActive}}">
+                        <a ui-sref="app.contact">Contact Us</a>
+                    </li>
+                </ul>
+                <!--
                 <ul class="nav navbar-nav">
                     <li ng-click="layoutController.tabSelect('home')" class="{{layoutController.homeActive}}">
                         <a ui-sref="app.home">Home</a>
@@ -13,9 +41,11 @@
                         <a ui-sref="app.contact">Contact Us</a>
                     </li>
                 </ul>
+-->
             </div>
-        </div>
     </nav>
+    </div>
+
     <div class="container">
         <ui-view>Layout</ui-view>
     </div>
