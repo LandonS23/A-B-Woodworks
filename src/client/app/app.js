@@ -26,8 +26,13 @@
                 templateUrl: clientApp + 'gallery-module/gallery.html',
                 controller: 'galleryController',
                 controllerAs: 'galleryController'
+            })
+            .state('app.contact', {
+                url: '/contact',
+                templateUrl: clientApp + 'contact-module/contact.html',
+                controller: 'contactController',
+                controllerAs: 'contactController'
             });
-
         $urlRouterProvider.otherwise('/app/home');
     });
 })();
