@@ -24,13 +24,13 @@
         vm.tabSelect = function (tabName) {
             if (tabName === 'home') {
                 vm.homeActive = 'active';
-                vm.aboutActive = statists.emptyString;
+                vm.aboutActive = statics.emptyString;
                 vm.galleryActive = statics.emptyString;
                 vm.contactActive = statics.emptyString;
             } else if (tabName === 'gallery') {
                 vm.galleryActive = 'active';
                 vm.homeActive = statics.emptyString;
-                vm.aboutActive = statists.emptyString;
+                vm.aboutActive = statics.emptyString;
                 vm.contactActive = statics.emptyString;
             } else if (tabName === 'about') {
                 vm.aboutActive = 'active';
@@ -40,7 +40,7 @@
             } else {
                 vm.contactActive = 'active';
                 vm.homeActive = statics.emptyString;
-                vm.aboutActive = statists.emptyString;
+                vm.aboutActive = statics.emptyString;
                 vm.galleryActive = statics.emptyString;
             }
         };
