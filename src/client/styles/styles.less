@@ -1,11 +1,18 @@
-.navbar-brand {
-    padding-top: 5px;
+.carousel-inner > .item > img {
+    margin: 0 auto;
 }
+//Navbar
 @bgDefault: #01579B;
 @bgHighlight : #0288D1;
 @colDefault : rgba(255, 255, 255, 0.87);
 @colHighlight : #fff;
 @dropDown : true;
+.navbar-brand {
+    padding-top: 5px;
+}
+.navbar {
+    margin-bottom: 15px;
+}
 .ddm() when (@dropDown) {
     > li > .dropdown-menu {
         background-color: @bgDefault;
