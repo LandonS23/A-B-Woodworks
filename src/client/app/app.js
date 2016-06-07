@@ -21,6 +21,12 @@
                 controller: 'homeController',
                 controllerAs: 'homeController'
             })
+            .state('app.about', {
+                url: '/about',
+                templateUrl: clientApp + 'about-module/about.html',
+                controller: 'aboutController',
+                controllerAs: 'aboutController'
+            })
             .state('app.gallery', {
                 url: '/gallery',
                 templateUrl: clientApp + 'gallery-module/gallery.html',
