@@ -19,12 +19,12 @@
                         <a ui-sref="app.about"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About Us</a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a ui-sref="app.gallery" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                           <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Gallery <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Cabinets</a></li>
-                            <li><a href="#">Doors</a></li>
-                            <li><a href="#">Something else here</a></li>
+                            <li><a ui-sref="app.gallery">Cabinets</a></li>
+                            <li><a ui-sref="app.gallery">Doors</a></li>
+                            <li><a ui-sref="app.gallery">Something else here</a></li>
                         </ul>
                     </li>
                     <li ng-click="layoutController.tabSelect('contact')" class="{{layoutController.contactActive}}">
