@@ -1,4 +1,115 @@
-@color_lightblue: #52b9e9;
-.btn.btn-primary {
-    background: @color_lightblue !important;
+.navbar-brand {
+    padding-top: 5px;
+}
+@bgDefault: #01579B;
+@bgHighlight : #0288D1;
+@colDefault : rgba(255, 255, 255, 0.87);
+@colHighlight : #fff;
+@dropDown : true;
+.ddm() when (@dropDown) {
+    > li > .dropdown-menu {
+        background-color: @bgDefault;
+        > li {
+            > a {
+                color: @colDefault;
+                &:hover,
+                &:focus {
+                    color: @colHighlight;
+                    background-color: @bgHighlight;
+                }
+            }
+            > .divider {
+                background-color: @bgHighlight;
+            }
+        }
+    }
+    .open .dropdown-menu > .active {
+        > a,
+        > a:hover,
+        > a:focus {
+            color: @colHighlight;
+            background-color: @bgHighlight;
+        }
+    }
+}
+.navbar-default {
+    background-color: @bgDefault;
+    border-color: @bgDefault;
+    .navbar-brand {
+        color: @colDefault;
+        &:hover,
+        &:focus {
+            color: @colHighlight;
+        }
+    }
+    .navbar-text {
+        color: @colDefault;
+    }
+    .navbar-nav {
+        > li {
+            > a {
+                color: @colDefault;
+                &:hover,
+                &:focus {
+                    color: @colHighlight;
+                }
+            }
+        }
+        .ddm;
+        > .active {
+            > a,
+            > a:hover,
+            > a:focus {
+                color: @colHighlight;
+                background-color: @bgHighlight;
+            }
+        }
+        > .open {
+            > a,
+            > a:hover,
+            > a:focus {
+                color: @colHighlight;
+                background-color: @bgHighlight;
+            }
+        }
+    }
+    .navbar-toggle {
+        border-color: @bgDefault;
+        &:hover,
+        &:focus {
+            background-color: @bgDefault;
+        }
+        .icon-bar {
+            background-color: @colDefault;
+        }
+    }
+    .navbar-collapse,
+    .navbar-form {
+        border-color: @bgDefault;
+    }
+    .navbar-link {
+        color: @colDefault;
+        &:hover {
+            color: @colHighlight;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu {
+        > li > a {
+            color: @colDefault;
+            &:hover,
+            &:focus {
+                color: @colHighlight;
+            }
+        }
+        > .active {
+            > a,
+            > a:hover,
+            > a:focus {
+                color: @colHighlight;
+                background-color: @bgHighlight;
+            }
+        }
+    }
 }

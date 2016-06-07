@@ -17,14 +17,30 @@
         };
 
         vm.homeActive = 'active';
+        vm.aboutActive = statics.emptyString;
         vm.galleryActive = statics.emptyString;
+        vm.contactActive = statics.emptyString;
 
         vm.tabSelect = function (tabName) {
-            if (vm.homeActive && tabName !== 'home') {
+            if (tabName === 'home') {
+                vm.homeActive = 'active';
+                vm.aboutActive = statics.emptyString;
+                vm.galleryActive = statics.emptyString;
+                vm.contactActive = statics.emptyString;
+            } else if (tabName === 'gallery') {
                 vm.galleryActive = 'active';
                 vm.homeActive = statics.emptyString;
+                vm.aboutActive = statics.emptyString;
+                vm.contactActive = statics.emptyString;
+            } else if (tabName === 'about') {
+                vm.aboutActive = 'active';
+                vm.homeActive = statics.emptyString;
+                vm.galleryActive = statics.emptyString;
+                vm.contactActive = statics.emptyString;
             } else {
-                vm.homeActive = 'active';
+                vm.contactActive = 'active';
+                vm.homeActive = statics.emptyString;
+                vm.aboutActive = statics.emptyString;
                 vm.galleryActive = statics.emptyString;
             }
         };

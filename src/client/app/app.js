@@ -21,13 +21,24 @@
                 controller: 'homeController',
                 controllerAs: 'homeController'
             })
+            .state('app.about', {
+                url: '/about',
+                templateUrl: clientApp + 'about-module/about.html',
+                controller: 'aboutController',
+                controllerAs: 'aboutController'
+            })
             .state('app.gallery', {
                 url: '/gallery',
                 templateUrl: clientApp + 'gallery-module/gallery.html',
                 controller: 'galleryController',
                 controllerAs: 'galleryController'
+            })
+            .state('app.contact', {
+                url: '/contact',
+                templateUrl: clientApp + 'contact-module/contact.html',
+                controller: 'contactController',
+                controllerAs: 'contactController'
             });
-
         $urlRouterProvider.otherwise('/app/home');
     });
 })();
