@@ -1,12 +1,31 @@
-.carousel-inner > .item > img {
-    margin: 0 auto;
-}
 //Navbar
 @bgDefault: #01579B;
 @bgHighlight : #0288D1;
 @colDefault : rgba(255, 255, 255, 0.87);
 @colHighlight : #fff;
 @dropDown : true;
+.carousel-inner > .item > img {
+    margin: 0 auto;
+    height: 500px;
+}
+.footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+body {
+    padding-bottom: 70px;
+}
+label {
+    //color: @bgHighlight;
+}
+.carousel {}
+.btn-primary {
+    background-color: @bgDefault;
+}
 .navbar-brand {
     padding-top: 5px;
 }
@@ -102,6 +121,10 @@
     }
 }
 @media (max-width: 767px) {
+    .carousel-inner > .item > img {
+        margin: 0 auto;
+        height: 200px;
+    }
     .navbar-default .navbar-nav .open .dropdown-menu {
         > li > a {
             color: @colDefault;
@@ -118,5 +141,9 @@
                 background-color: @bgHighlight;
             }
         }
+    }
+    .footer {
+        display: none;
+        visibility: hidden;
     }
 }
