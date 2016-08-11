@@ -1,12 +1,23 @@
-//Navbar
-@bgDefault: #01579B;
-@bgHighlight : #0288D1;
-@colDefault : rgba(255, 255, 255, 0.87);
-@colHighlight : #fff;
-@dropDown : true;
-.carousel-inner > .item > img {
-    margin: 0 auto;
-    height: 500px;
+html {
+    background: url('../images/wood _background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+body {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.layout {
+    padding-bottom: 70px;
+    margin-top: 15px;
 }
 .footer {
     padding-top: 20px;
@@ -15,22 +26,30 @@
     line-height: 1.5;
     border-top: 1px solid #eee;
     text-align: center;
-}
-body {
-    padding-bottom: 70px;
+    color: #767676;
 }
 label {
-    //color: @bgHighlight;
+    color: white;
 }
-.carousel {}
+.carousel-inner > .item > img {
+    margin: 0 auto;
+    height: 500px;
+}
+//Colors
+@bgDefault: #23436C;
+@bgHighlight : #3C72B9;
+@colDefault : white;
+@colHighlight : rgba(255,
+255,
+255,
+0.9);
+@dropDown : true;
 .btn-primary {
     background-color: @bgDefault;
+    border-color: transparent;
 }
 .navbar-brand {
     padding-top: 5px;
-}
-.navbar {
-    margin-bottom: 15px;
 }
 .ddm() when (@dropDown) {
     > li > .dropdown-menu {
@@ -142,8 +161,11 @@ label {
             }
         }
     }
-    .footer {
+    .navbar-fixed-bottom {
         display: none;
         visibility: hidden;
+    }
+    body {
+        padding-bottom: 0px;
     }
 }
