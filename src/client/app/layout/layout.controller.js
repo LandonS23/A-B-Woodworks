@@ -44,5 +44,14 @@
                 vm.galleryActive = statics.emptyString;
             }
         };
+
+        if (window.innerHeight > 900) {
+            vm.fixedFooter = 'navbar-fixed-bottom';
+        } else {
+            vm.fixedFooter = statics.emptyString;
+        }
+
+        console.log(vm.fixedFooter);
     }
+
 }());
