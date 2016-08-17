@@ -7,6 +7,11 @@ html {
     background-color: rgba(0, 0, 0, 0.7);
     height: 100%;
 }
+@font-face {
+    font-family: 'Watson';
+    src: url('../fonts/Watson.ttf') format('truetype');
+    font-weight: bold;
+}
 body {
     width: 100%;
     min-height: 100%;
@@ -15,9 +20,8 @@ body {
 }
 h1 {
     margin-top: 0px;
-}
-.layout {
-    padding-bottom: 70px;
+    font-family: Watson;
+    font-size: 2em;
 }
 .footer {
     padding-top: 20px;
@@ -70,6 +74,7 @@ h1 {
 .ddm() when (@dropDown) {
     > li > .dropdown-menu {
         background-color: @bgDefault;
+        font-size: 12px;
         > li {
             > a {
                 color: @colDefault;
@@ -96,6 +101,8 @@ h1 {
 .navbar-default {
     background-color: @bgDefault;
     border-color: @bgDefault;
+    font-family: Watson;
+    font-size: 12px;
     .navbar-brand {
         color: @colDefault;
         &:hover,
