@@ -1,14 +1,80 @@
+html {
+    background: url('../images/wood _background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+}
+@font-face {
+    font-family: 'Watson';
+    src: url('../fonts/Watson.ttf') format('truetype');
+    font-weight: bold;
+}
+body {
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+h1 {
+    margin-top: 0px;
+    font-family: Watson;
+    font-size: 2em;
+}
+.footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-top: 1px solid #eee;
+    text-align: center;
+    color: #767676;
+}
+.message {
+    margin-bottom: 0px;
+}
+.quote {
+    font-style: italic;
+}
+#InputPhone {
+    max-width: 20ch;
+}
+#InputName {
+    max-width: 50ch;
+}
+#InputEmail {
+    max-width: 50ch;
+}
+#InputText {
+    resize: none;
+    max-width: 75ch;
+}
+.carousel-inner > .item > img {
+    margin: 0 auto;
+    height: 500px;
+}
+//Colors
+@bgDefault: #23436C;
+@bgHighlight : #3C72B9;
+@colDefault : white;
+@colHighlight : rgba(255,
+255,
+255,
+0.9);
+@dropDown : true;
+.btn-primary {
+    background-color: @bgDefault;
+    border-color: transparent;
+}
 .navbar-brand {
     padding-top: 5px;
 }
-@bgDefault: #01579B;
-@bgHighlight : #0288D1;
-@colDefault : rgba(255, 255, 255, 0.87);
-@colHighlight : #fff;
-@dropDown : true;
 .ddm() when (@dropDown) {
     > li > .dropdown-menu {
         background-color: @bgDefault;
+        font-size: 12px;
         > li {
             > a {
                 color: @colDefault;
@@ -35,6 +101,8 @@
 .navbar-default {
     background-color: @bgDefault;
     border-color: @bgDefault;
+    font-family: Watson;
+    font-size: 12px;
     .navbar-brand {
         color: @colDefault;
         &:hover,
@@ -95,6 +163,10 @@
     }
 }
 @media (max-width: 767px) {
+    .carousel-inner > .item > img {
+        margin: 0 auto;
+        height: 200px;
+    }
     .navbar-default .navbar-nav .open .dropdown-menu {
         > li > a {
             color: @colDefault;
@@ -111,5 +183,8 @@
                 background-color: @bgHighlight;
             }
         }
+    }
+    .layout {
+        padding-bottom: 10px;
     }
 }

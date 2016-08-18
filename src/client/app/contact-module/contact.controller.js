@@ -10,7 +10,8 @@
 
         var vm = this;
 
-        console.log('Contact Controller');
+        console.log();
+        //        [a-zA-Z0-9]+([a-zA-Z0-9_.$\u0026-]+)*@[a-zA-Z0-9]+([a-zA-Z0-9_.$\u0026-]+)*.([a-zA-Z0-9]{2,4})
 
     }
 }());

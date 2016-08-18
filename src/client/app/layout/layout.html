@@ -22,8 +22,9 @@
                         <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Gallery <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a ui-sref="app.gallery">Cabinets</a></li>
-                        <li><a ui-sref="app.gallery">Doors</a></li>
-                        <li><a ui-sref="app.gallery">Something else here</a></li>
+                        <li><a ui-sref="app.gallery">Stairs</a></li>
+                        <li><a ui-sref="app.gallery">Mantels</a></li>
+                        <li><a ui-sref="app.gallery">Trim and More</a></li>
                     </ul>
                 </li>
                 <li ng-click="layoutController.tabSelect('contact')" class="{{layoutController.contactActive}}">
@@ -34,6 +35,12 @@
     </div>
 </nav>
 
-<div class="container">
+<div class="container layout">
     <ui-view>Layout</ui-view>
+</div>
+
+<div class="container">
+    <footer class="footer {{layoutController.fixedFooter}}">
+        <p>© 2016 A & B Woodworks. All Rights Reserved. Website by <a href="https://docs.google.com/document/d/1zqGmIuzgSIRAFimmewn9MyXJ9a1IUbjg6ZtudPm0cpE/edit?usp=sharing" target="_blank">Landon Sherwood</a></p>
+    </footer>
 </div>
