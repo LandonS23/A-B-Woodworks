@@ -8,8 +8,6 @@
 
     function layoutController() {
 
-        console.log('Layout Controller');
-
         var vm = this;
 
         var statics = {

@@ -10,7 +10,14 @@
 
         var vm = this;
 
-        console.log('Home Controller');
+        var statics = {
+            emptyString: ''
+        };
 
+        if (window.innerHeight > 750) {
+            vm.verticalAlign = 'vertical-align';
+        } else {
+            vm.verticalAlign = statics.emptyString;
+        }
     }
 }());
