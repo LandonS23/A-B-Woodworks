@@ -49,8 +49,6 @@
             console.log(window.innerHeight);
             vm.fixedFooter = statics.emptyString;
         }
-
-        console.log(vm.fixedFooter);
     }
 
 }());

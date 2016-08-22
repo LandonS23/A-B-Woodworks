@@ -33,12 +33,31 @@ console.log('** DEV **');
 app.use(express.static('./src/client/'));
 app.use(express.static('./'));
 app.use(express.static('./tmp'));
+app.use('/api/contact', express.static('./src/server/api/contact/index.js'));
 app.use('/*', express.static('./src/client/index.html'));
 
 app.listen(port, function () {
     console.log('Express server listening on port ' + port);
     console.log('env = ' + app.get('env') +
-                '\n__dirname = ' + __dirname +
-                '\nprocess.cwd = ' + process.cwd());
+        '\n__dirname = ' + __dirname +
+        '\nprocess.cwd = ' + process.cwd());
 });
 
+//var core = express.static('src/client/layout/layout.controller.js');
+
+
+//var sendMail = function (req, res) {
+//
+//    var data = req.body;
+//
+//    transporter.sendMail({
+//        from: data.contactEmail,
+//        to: 'landonsherwood23@gmail.com',
+//        subject: 'Message from ' + data.contactName,
+//        html: "<label>Name: </label>" + data.contactName + "<br/><label>Phone Number: </label>" + data.contactNumber + "<br/><label>Email: </label>" + data.contactEmail + "<br/><label>Message: </label>" + data.contactMsg
+//    });
+//
+//    res.json(data);
+//};
+
+//app.use('/contact-form', express.static('.src/server/server.js')).post(sendMail);
