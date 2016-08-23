@@ -4,20 +4,6 @@
 var express = require('express');
 var app = express();
 var nodemailer = require('nodemailer');
-//var xoauth2 = require('xoauth2');
-//var generator = require('xoauth2').createXOAuth2Generator({
-//    user: 'ABWoodworksWeb@gmail.com', // Your gmail address.
-//
-//    clientId: '',
-//    clientSecret: '',
-//    refreshToken: '',
-//});
-// listen for token updates
-// you probably want to store these to a db
-//generator.on('token', function (token) {
-//    console.log('New token for %s: %s', token.user, token.accessToken);
-//});
-//var transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
 //login
 var transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -70,11 +56,10 @@ app.post('/send', function (req, res) {
     var data = req.body;
 
     var mailOptions = {
-        from: '"A&amp;B Woodworks" <ABWoodworksWeb@gmail.com>',
+        from: '"A&B Woodworks" <ABWoodworksWeb@gmail.com>',
         to: 'landonsherwood23@gmail.com',
-        subject: 'Message from ' + data.contactName, // Subject line
-        //        text: 'Hello world ', // plaintext body
-        html: '<label>Name: </label>' + data.contactName + '<br/><label>Phone Number: </label>' + data.contactNumber + '<br/><label>Email: </label>' + data.contactEmail + '<br/><label>Message: </label>' + data.contactMsg // html body
+        subject: 'Inquiry from ' + data.contactName,
+        html: '<img src="https://s3.postimg.org/4vurxswy7/AB_transparent.png" height="40"><h3>Contact Info:</h3><BLOCKQUOTE><b>Name: </b>' + data.contactName + '<br/><b>Phone Number: </b>' + data.contactNumber + '<br/><b>Email: </b>' + data.contactEmail + '</BLOCKQUOTE><h3>Message:</h3><BLOCKQUOTE>' + data.contactMsg + '</BLOCKQUOTE>'
     };
 
     transporter.sendMail(mailOptions, function (error, info) {
@@ -85,6 +70,5 @@ app.post('/send', function (req, res) {
         }
         transporter.close();
     });
-    //res.redirect('/');
     res.json(data);
 });
