@@ -56,9 +56,9 @@ app.post('/send', function (req, res) {
     var data = req.body;
 
     var mailOptions = {
-        from: '"A&B Woodworks" <ABWoodworksWeb@gmail.com>',
+        from: '"A & B Woodworks 🔨" <ABWoodworksWeb@gmail.com>',
         to: 'landonsherwood23@gmail.com',
-        subject: 'Inquiry from ' + data.contactName,
+        subject: 'Inquiry  from ' + data.contactName,
         html: '<img src="https://s3.postimg.org/4vurxswy7/AB_transparent.png" height="40"><h3>Contact Info:</h3><BLOCKQUOTE><b>Name: </b>' + data.contactName + '<br/><b>Phone Number: </b>' + data.contactNumber + '<br/><b>Email: </b>' + data.contactEmail + '</BLOCKQUOTE><h3>Message:</h3><BLOCKQUOTE>' + data.contactMsg + '</BLOCKQUOTE>'
     };
 
@@ -70,5 +70,6 @@ app.post('/send', function (req, res) {
         }
         transporter.close();
     });
+
     res.json(data);
 });
