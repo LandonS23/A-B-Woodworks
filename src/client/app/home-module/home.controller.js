@@ -9,15 +9,5 @@
     function homeController() {
 
         var vm = this;
-
-        var statics = {
-            emptyString: ''
-        };
-
-        if (window.innerHeight > 750) {
-            vm.verticalAlign = 'vertical-align';
-        } else {
-            vm.verticalAlign = statics.emptyString;
-        }
     }
 }());

@@ -46,7 +46,6 @@
         if (window.innerHeight > 750) {
             vm.fixedFooter = 'navbar-fixed-bottom';
         } else {
-            console.log(window.innerHeight);
             vm.fixedFooter = statics.emptyString;
         }
     }
