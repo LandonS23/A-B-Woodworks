@@ -4,9 +4,9 @@
 
     'use strict';
 
-    angular.module('ABWoodworks').controller('layoutController', ['$rootScope', layoutController]);
+    angular.module('ABWoodworks').controller('layoutController', [layoutController]);
 
-    function layoutController($rootScope) {
+    function layoutController() {
 
         var vm = this;
 
