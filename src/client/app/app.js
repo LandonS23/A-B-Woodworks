@@ -13,7 +13,8 @@
                 abstract: true,
                 templateUrl: clientApp + 'layout/layout.html',
                 controller: 'layoutController',
-                controllerAs: 'layoutController'
+                controllerAs: 'layoutController',
+                activeClass: 'home'
             })
             .state('app.home', {
                 url: '/home',
@@ -40,5 +41,33 @@
                 controllerAs: 'contactController'
             });
         $urlRouterProvider.otherwise('/app/home');
-    });
+    })
+
+    .run(function ($rootScope) {
+        $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+            $rootScope.activeClass = toState.url.substring(1);
+
+            $rootScope.homeActive = '';
+            $rootScope.aboutActive = '';
+            $rootScope.galleryActive = '';
+            $rootScope.contactActive = '';
+
+            switch ($rootScope.activeClass) {
+                case 'home':
+                    $rootScope.homeActive = 'active';
+                    break;
+                case 'gallery':
+                    $rootScope.galleryActive = 'active';
+                    break;
+                case 'about':
+                    $rootScope.aboutActive = 'active';
+                    break;
+                case 'contact':
+                    $rootScope.contactActive = 'active';
+                    break;
+                default:
+                    $rootScope.homeActive = 'active';
+            }
+        });
+    })
 })();
