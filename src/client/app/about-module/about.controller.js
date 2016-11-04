@@ -10,5 +10,8 @@
 
         var vm = this;
 
+        if (window.innerHeight > 750) {
+
+        }
     }
 }());
