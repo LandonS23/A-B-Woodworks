@@ -10,7 +10,5 @@
 
         var vm = this;
 
-        console.log('Gallery Controller');
-
     }
 }());

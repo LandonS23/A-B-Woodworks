@@ -8,8 +8,6 @@
 
     function layoutController() {
 
-        console.log('Layout Controller');
-
         var vm = this;
 
         var statics = {
@@ -48,11 +46,8 @@
         if (window.innerHeight > 750) {
             vm.fixedFooter = 'navbar-fixed-bottom';
         } else {
-            console.log(window.innerHeight);
             vm.fixedFooter = statics.emptyString;
         }
-
-        console.log(vm.fixedFooter);
     }
 
 }());
