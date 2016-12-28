@@ -1,17 +1,21 @@
 <h1>About Us</h1>
 <div class="row">
-    <div class="col-xs-8 col-md-4">
-        <div class="thumbnail">
+    <div class="col-xs-6 col-md-4 {{aboutController.photo}}">
+        <div class="thumbnail about-thumbnail">
             <img src="../../images/family.jpg" alt="Chris">
             <div class="caption">
-                <h3 class="home-label">Chris Aikins<br/><br/>Owner</h3>
+                <h3 class="home-label">Chris Aikins<br/>Owner</h3>
             </div>
         </div>
     </div>
+    <div class="col-xs-6 col-md-8 {{aboutController.text}}">
+        <h4>A&amp;B Woodworks has provided quality cabinets, mantels, stairs, trim and more to the state of Oklahoma for over 20 years.</h4>
+    </div>
+    <div class="clearfix visible-xs"></div>
     <div class="col-xs-12 col-md-8">
-        <h4>A &amp; B Woodworks has provided quality cabinets, mantels, stairs, trim and more to the state of Oklahoma for over 25 years.
-            <br/><br/>With personal, professional service from our experts you'll find exactly what you need.<br/><br/>If you can draw it we can saw it!</h4>
+        <h4>With personal, professional service from our experts you'll find exactly what you need.<br/><br/>If you can draw it we can saw it!</h4>
     </div>
 </div>
 
-<h4 align="center"><a ui-sref="app.contact">Contact us</a> today with any question you may have or to obtain a free estimate.</h4>
+
+<h4 align="{{aboutController.center}}"><a ui-sref="app.contact">Contact us</a> today with any question you may have or to obtain a free estimate.</h4>

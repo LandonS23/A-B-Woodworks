@@ -10,10 +10,10 @@
 
         var vm = this;
 
-        if (window.innerHeight > 750) {
-            vm.fixedFooter = 'navbar-fixed-bottom';
+        if (window.innerHeight < 750) {
+            vm.fixedFooter = false;
         } else {
-            vm.fixedFooter = '';
+            vm.fixedFooter = true;
         }
     }
 
