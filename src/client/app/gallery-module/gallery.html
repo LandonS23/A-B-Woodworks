@@ -1,8 +1,24 @@
 <h1>Gallery</h1>
 
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" ng-repeat="img in galleryController.images track by $index" class="{active : ($index === 0)}" data-slide-to="{{$index}}"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div ng-class="{item: true, active : ($index === 0)}" ng-repeat="img in galleryController.images track by $index">
+          <img ng-src={{img}} alt="Slide numder {{$index}}">
+          <div class="container">
+            <div class="carousel-caption"> </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" data-target="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" data-target="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
 <div class="row thumbnail-row">
     <div class="col-xs-6 col-md-3">
-        <div class="thumbnail">
+        <div class="thumbnail" ui-sref="app.gallery.cabinets">
             <img src="../../images/IMG_3536.jpg" alt="Cabinets">
             <div class="caption">
                 <h3 class="home-label">Cabinets</h3>
@@ -10,7 +26,7 @@
         </div>
     </div>
     <div class="col-xs-6 col-md-3">
-        <div class="thumbnail">
+        <div class="thumbnail" ui-sref="app.gallery.mantels">
             <img src="../../images/mantel.jpg" alt="Mantels">
             <div class="caption">
                 <h3 class="home-label">Mantels</h3>
@@ -18,7 +34,7 @@
         </div>
     </div>
     <div class="col-xs-6 col-md-3">
-        <div class="thumbnail">
+        <div class="thumbnail" ui-sref="app.gallery.stairs">
             <img src="../../images/stairshome1.jpg" alt="Stairs">
             <div class="caption">
                 <h3 class="home-label">Stairs</h3>
@@ -26,7 +42,7 @@
         </div>
     </div>
     <div class="col-xs-6 col-md-3">
-        <div class="thumbnail">
+        <div class="thumbnail" ui-sref="app.gallery.trimAndMore">
             <img src="../../images/work%20002.jpg" alt="More">
             <div class="caption">
                 <h3 class="home-label">Trim &amp; More</h3>

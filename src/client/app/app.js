@@ -34,6 +34,26 @@
                 controller: 'galleryController',
                 controllerAs: 'galleryController'
             })
+            .state('app.gallery.cabinets', {
+              url: '/cabinets',
+              templateUrl: clientApp + 'gallery-module/gallery.html',
+              controllerAs: 'galleryController'
+            })
+            .state('app.gallery.mantels', {
+              url: '/mantels',
+              templateUrl: clientApp + 'gallery-module/gallery.html',
+              controllerAs: 'galleryController'
+            })
+            .state('app.gallery.stairs', {
+              url: '/stairs',
+              templateUrl: clientApp + 'gallery-module/gallery.html',
+              controllerAs: 'galleryController'
+            })
+            .state('app.gallery.trimAndMore', {
+              url: '/trimAndMore',
+              templateUrl: clientApp + 'gallery-module/gallery.html',
+              controllerAs: 'galleryController'
+            })
             .state('app.contact', {
                 url: '/contact',
                 templateUrl: clientApp + 'contact-module/contact.html',
@@ -58,6 +78,18 @@
                     break;
                 case 'gallery':
                     $rootScope.galleryActive = 'active';
+                    break;
+                case 'cabinets':
+                    $rootScope.cabinetsActive = 'active';
+                    break;
+                case 'mantels':
+                    $rootScope.mantelsActive = 'active';
+                    break;
+                case 'stairs':
+                    $rootScope.stairsActive = 'active';
+                    break;
+                case 'trimAndMore':
+                    $rootScope.trimAndMoreActive = 'active';
                     break;
                 case 'about':
                     $rootScope.aboutActive = 'active';

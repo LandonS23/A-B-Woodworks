@@ -26,9 +26,18 @@ h3 {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+.carousel-inner>.item>img {
+  display:block;
+  margin:auto;
+  height: 300px;
+}
+.carousel {
+  padding-bottom: 10px;
+}
 .thumbnail {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 .about-contact {
   padding-top: 30px;
