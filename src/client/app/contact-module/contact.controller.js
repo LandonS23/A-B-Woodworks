@@ -28,7 +28,7 @@
 
         vm.sendMail = function () {
             vm.data.contactNumber = vm.data.contactNumber.replace(/^\(?(\d{3})\)?[ .-]?(\d{3})[ .-]?(\d{4})$/, "($1) $2-$3");
-
+debugger;
             $http.post('/send', vm.data).
             success(function (data, status, headers, config) {
                 console.log('Thanks for your inquiry ' + data.contactName);
