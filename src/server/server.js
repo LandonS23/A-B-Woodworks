@@ -41,11 +41,8 @@ app.get('/ping', function (req, res, next) {
 console.log('** DEV **');
 app.use(express.static('./src/client/'));
 app.use(express.static('./'));
-app.use('./.tmp', express.static(__dirname + '/.tmp'));
-app.use('./src/client/fonts', express.static(__dirname + '/src/client/fonts'));
+app.use(express.static('./tmp'));
 app.use('/*', express.static('./src/client/index.html'));
-
-express().listen(3000);
 
 app.listen(port, function () {
     console.log('Express server listening on port ' + port);
