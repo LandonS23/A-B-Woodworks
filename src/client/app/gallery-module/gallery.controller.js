@@ -10,5 +10,10 @@
 
         var vm = this;
 
+        vm.cabinetImages = [];
+        vm.mantelImages = [];
+        vm.stairImages = [];
+        vm.trimMoreImages = [];
+
     }
 }());

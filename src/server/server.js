@@ -57,7 +57,7 @@ app.post('/send', function (req, res) {
 
     var mailOptions = {
         from: '"A & B Woodworks 🔨" <ABWoodworksWeb@gmail.com>',
-        to: 'landonsherwood23@gmail.com',
+        to: 'Caikins74@gmail.com',
         subject: 'Inquiry  from ' + data.contactName,
         html: '<img src="https://s3.postimg.org/4vurxswy7/AB_transparent.png" height="40"><h3>Contact Info:</h3><BLOCKQUOTE><b>Name: </b>' + data.contactName + '<br/><b>Phone Number: </b>' + data.contactNumber + '<br/><b>Email: </b>' + data.contactEmail + '</BLOCKQUOTE><h3>Message:</h3><BLOCKQUOTE>' + data.contactMsg + '</BLOCKQUOTE>'
     };
