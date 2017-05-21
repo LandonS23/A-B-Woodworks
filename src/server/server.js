@@ -41,8 +41,7 @@ app.get('/ping', function (req, res, next) {
 console.log('** DEV **');
 app.use(express.static('./src/client/'));
 app.use(express.static('./'));
-app.use(express.static('./tmp/styles.css'));
-app.use(express.static('./src/client/fonts/Watson.ttf'));
+app.use(express.static('./tmp'));
 app.use('/*', express.static('./src/client/index.html'));
 
 app.listen(port, function () {
