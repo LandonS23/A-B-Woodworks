@@ -8,7 +8,7 @@
 
     function galleryController($rootScope, $state) {
         var vm = this;
-
+        vm.name = '';
         vm.cabinetImages = ['../../images/IMG_3536.jpg', '../../images/cabinets1.jpg', '../../images/cabinets2.jpg', '../../images/cabinets3.jpg', '../../images/cabinets4.jpg', '../../images/cabinets5.jpg', '../../images/cabinets6.jpg', '../../images/cabinets7.jpg'];
         vm.mantelImages = ['../../images/mantel.jpg', '../../images/mantel0.jpg', '../../images/mantel1.jpg', '../../images/mantel2.jpg', '../../images/mantel3.jpg', '../../images/mantel4.jpg', '../../images/mantel5.jpg', '../../images/mantel6.jpg', '../../images/mantel7.jpg'];
         vm.stairImages = ['../../images/stairshome1.jpg', '../../images/stairshome.jpg', '../../images/stairs.jpg', '../../images/stairs1.jpg', '../../images/stairs2.jpg'];
@@ -17,16 +17,19 @@
         // handle route changes
         switch ($state.current.url.substring(1)) {
             case 'cabinets':
-                vm.$index = 0;
+                vm.name = 'Cabinets';
                 vm.images = vm.cabinetImages;
                 break;
             case 'mantels':
+                vm.name = 'Mantels';
                 vm.images = vm.mantelImages;
                 break;
             case 'stairs':
+                vm.name = 'Stairs';
                 vm.images = vm.stairImages;
                 break;
             case 'trimAndMore':
+                vm.name = 'Trim and More';
                 vm.images = vm.trimMoreImages;
                 break;
         }
